@@ -14,7 +14,7 @@ namespace secret_santa
             TextWriter oldOut = Console.Out;
             try
             {
-                ostrm = new FileStream($"{desktopPath}/Santa.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                ostrm = new FileStream($"{desktopPath}/Santa.txt", FileMode.Create, FileAccess.Write);
                 writer = new StreamWriter(ostrm);
             }
             catch (Exception e)

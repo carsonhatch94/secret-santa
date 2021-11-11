@@ -45,14 +45,6 @@ namespace secret_santa
             {
                 cleanList.Remove(item);
             }
-            for (int i = 0; i < cleanList.Count; i++)
-            {
-                Console.Write($"{cleanList[i]}, ");
-                if (i == cleanList.Count - 1)
-                {
-                    Console.Write("\n");
-                }
-            }
 
             return cleanList;
         }
