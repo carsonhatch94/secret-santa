@@ -2,9 +2,9 @@ using System;
 
 namespace secret_santa
 {
-    public class Welcome
+    public static class Welcome
     {
-        public void PrintWelcomeMessage()
+        public static void PrintWelcomeMessage()
         {
             Console.Write('\n');
             PrintColorfulHoHoHo();
@@ -13,7 +13,7 @@ namespace secret_santa
             Console.WriteLine("Be sure to format names as \n participant/spouse \n");
         }
 
-        private void PrintColorfulHoHoHo()
+        private static void PrintColorfulHoHoHo()
         {
             for (int i = 0; i < 3; i++)
             {

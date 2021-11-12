@@ -4,9 +4,9 @@ using System.IO;
 
 namespace secret_santa
 {
-    class CreateFile 
+    public static class CreateFile 
     {
-        public void SaveResultsToFileOnDesktop(List<Tuple<string, string>> secretSantaPairings)
+        public static void SaveResultsToFileOnDesktop(List<Tuple<string, string>> secretSantaPairings)
         {
             var desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             FileStream ostrm;
