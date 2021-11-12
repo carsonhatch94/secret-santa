@@ -12,7 +12,6 @@ namespace secret_santa
             {
                 Random random = new Random();
                 var spouse = GetSpouseOfGuest(guest, allCouples);
-                Console.WriteLine(spouse);
                 List<string> cleanList = RemoveInvalidGuests(assigned, guest, spouse, allGuests);
                 var recipient = cleanList[random.Next(cleanList.Count)];
                 secretSantaPairings.Add(Tuple.Create(guest, recipient));
