@@ -5,7 +5,6 @@ namespace secret_santa
 {
     class Program
     {
-        public static List<string> allGuests = new List<string>();
         public static List<string> assigned = new List<string>();
         public static List<Tuple<string, string>> allCouples = new List<Tuple<string, string>>();
         public static List<Tuple<string, string>> secretSantaPairings = new List<Tuple<string, string>>();
@@ -13,8 +12,8 @@ namespace secret_santa
         static void Main(string[] args)
         {
             Welcome.PrintWelcomeMessage();
-            GuestEntry.ParseGuests(allCouples, allGuests);
-            Assignments.AssignRecipientToGuest(assigned, secretSantaPairings, allGuests, allCouples);
+            GuestEntry.ParseGuests(allCouples);
+            Assignments.AssignRecipientToGuest(assigned, secretSantaPairings, allCouples);
             CreateFile.SaveResultsToFileOnDesktop(secretSantaPairings);
         }
     }

@@ -5,7 +5,7 @@ namespace secret_santa
 {
     public static class GuestEntry
     {
-        public static void ParseGuests(List<Tuple<string, string>> allCouples, List<string> allGuests)
+        public static void ParseGuests(List<Tuple<string, string>> allCouples)
         {
             if (allCouples.Count > 0)
             {
@@ -33,14 +33,13 @@ namespace secret_santa
                 string[] names = pair.Split('/');
                 Console.WriteLine(names.Length);
                 allCouples.Add(Tuple.Create(names[0], names[1]));
-                allGuests.Add(names[0]);
-                allGuests.Add(names[1]);
-                ParseGuests(allCouples, allGuests);
+                ParseGuests(allCouples);
             }
 
             if (pair == "REMOVE")
             {
                 RemoveEntry(allCouples);
+                ParseGuests(allCouples);
             }
 
         }

@@ -6,8 +6,9 @@ namespace secret_santa
 {
     public static class Assignments
     {
-        public static void AssignRecipientToGuest(List<string> assigned, List<Tuple<string, string>> secretSantaPairings, List<string> allGuests, List<Tuple<string, string>> allCouples)
+        public static void AssignRecipientToGuest(List<string> assigned, List<Tuple<string, string>> secretSantaPairings, List<Tuple<string, string>> allCouples)
         {
+            var allGuests = GetAllGuests(allCouples);
             foreach (var guest in allGuests)
             {
                 Random random = new Random();
@@ -50,6 +51,18 @@ namespace secret_santa
             }
 
             return spouse;
+        }
+
+        private static List<string> GetAllGuests(List<Tuple<string, string>> allCouples) 
+        {
+            var allGuests = new List<string>();
+            foreach (var couple in allCouples)
+            {
+                allGuests.Add(couple.Item1);
+                allGuests.Add(couple.Item2);
+            }
+
+            return allGuests;
         }
     }
 }
