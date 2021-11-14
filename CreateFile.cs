@@ -24,10 +24,11 @@ namespace secret_santa
                 return;
             }
             Console.SetOut(writer);
-            Console.WriteLine("Secret Santa: " + "Gift Recipient:");
+            Console.WriteLine(string.Format("|{0,-15}|{1,15}|", "Secret Santa ", "Gift Recipient "));
+            Console.WriteLine("---------------------------------");
             foreach (var pair in secretSantaPairings)
             {
-                Console.WriteLine($"{pair.Item1}" + "     gives to     " + $"{pair.Item2}");
+                Console.WriteLine(string.Format("|{0,-15}|{1,15}|", pair.Item1, pair.Item2));
             }
             Console.SetOut(oldOut);
             writer.Close();
