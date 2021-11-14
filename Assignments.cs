@@ -6,9 +6,10 @@ namespace secret_santa
 {
     public static class Assignments
     {
-        public static void AssignRecipientToGuest(List<string> assigned, List<Tuple<string, string>> secretSantaPairings, List<Tuple<string, string>> allCouples)
+        public static void AssignRecipientToGuest(List<Tuple<string, string>> secretSantaPairings, List<Tuple<string, string>> allCouples)
         {
             var allGuests = GetAllGuests(allCouples);
+            var assigned = new List<string>();
             foreach (var guest in allGuests)
             {
                 Random random = new Random();
