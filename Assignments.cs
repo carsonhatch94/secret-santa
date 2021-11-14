@@ -15,6 +15,11 @@ namespace secret_santa
                 Random random = new Random();
                 var spouse = GetSpouseOfGuest(guest, allCouples);
                 List<string> cleanList = RemoveInvalidGuests(assigned, guest, spouse, allGuests);
+                if (cleanList.Count == 0)
+                {
+                    // Need to fix issue where sometimes a guest only has their spouse or themselves as option and the app dies
+                    // Maybe some recurrtion here? *shruggies*
+                }
                 var recipient = cleanList[random.Next(cleanList.Count)];
                 secretSantaPairings.Add(Tuple.Create(guest, recipient));
                 assigned.Add(recipient);
