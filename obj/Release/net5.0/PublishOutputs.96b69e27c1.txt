@@ -1,0 +1,5 @@
+C:\Users\Tommy Platero\SecretSanta\secret-santa\bin\Release\net5.0\publish\secret-santa.exe
+C:\Users\Tommy Platero\SecretSanta\secret-santa\bin\Release\net5.0\publish\secret-santa.dll
+C:\Users\Tommy Platero\SecretSanta\secret-santa\bin\Release\net5.0\publish\secret-santa.deps.json
+C:\Users\Tommy Platero\SecretSanta\secret-santa\bin\Release\net5.0\publish\secret-santa.runtimeconfig.json
+C:\Users\Tommy Platero\SecretSanta\secret-santa\bin\Release\net5.0\publish\secret-santa.pdb
