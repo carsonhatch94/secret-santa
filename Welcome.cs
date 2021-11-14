@@ -11,6 +11,7 @@ namespace secret_santa
             Console.WriteLine(", Merry Christmas!");
             Console.WriteLine("This will help you pair people up with someone who isn't their spouse for Secret Santa");
             Console.WriteLine("Be sure to format names as \n participant/spouse \n");
+            Console.WriteLine("The pairings will be saved to a file on your desktop called 'Santa.txt'");
         }
 
         private static void PrintColorfulHoHoHo()
