@@ -27,7 +27,7 @@ namespace secret_santa
             Console.WriteLine("Secret Santa: " + "Gift Recipient:");
             foreach (var pair in secretSantaPairings)
             {
-                Console.WriteLine($"{pair.Item1}" + "     -->     " + $"{pair.Item2}");
+                Console.WriteLine($"{pair.Item1}" + "     gives to     " + $"{pair.Item2}");
             }
             Console.SetOut(oldOut);
             writer.Close();

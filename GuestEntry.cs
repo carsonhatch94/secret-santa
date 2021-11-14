@@ -31,7 +31,6 @@ namespace secret_santa
             if (pair != "REMOVE")
             {
                 string[] names = pair.Split('/');
-                Console.WriteLine(names.Length);
                 allCouples.Add(Tuple.Create(names[0], names[1]));
                 ParseGuests(allCouples);
             }

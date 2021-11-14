@@ -12,7 +12,7 @@ namespace secret_santa
         {
             Welcome.PrintWelcomeMessage();
             GuestEntry.ParseGuests(allCouples);
-            Assignments.AssignRecipientToGuest(secretSantaPairings, allCouples);
+            secretSantaPairings = Assignments.AssignRecipientToGuest(allCouples);
             CreateFile.SaveResultsToFileOnDesktop(secretSantaPairings);
         }
     }
