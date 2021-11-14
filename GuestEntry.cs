@@ -23,22 +23,24 @@ namespace secret_santa
             string pair = "";
             pair = PreventEmptyEntries();
 
-            if (pair == "REMOVE")
+            if (pair == "DONE")
             {
-                RemoveEntry(allCouples);
+                return;
             }
 
-            if (pair != "DONE")
+            if (pair != "REMOVE")
             {
                 string[] names = pair.Split('/');
+                Console.WriteLine(names.Length);
                 allCouples.Add(Tuple.Create(names[0], names[1]));
                 allGuests.Add(names[0]);
                 allGuests.Add(names[1]);
                 ParseGuests(allCouples, allGuests);
             }
-            else
+
+            if (pair == "REMOVE")
             {
-                return;
+                RemoveEntry(allCouples);
             }
 
         }

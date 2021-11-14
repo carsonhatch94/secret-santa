@@ -32,7 +32,7 @@ namespace secret_santa
             Console.SetOut(oldOut);
             writer.Close();
             ostrm.Close();
-            Console.WriteLine("Done");
+            Console.WriteLine("Merry Christmas to all and to all a good night!");
         }
     }
 }
